@@ -10,17 +10,17 @@ abstract class Pizza
 
     public function prepare(): string
     {
-        $phrase = "Началась готовка пиццы {$this->name}";
-        $phrase = "Добавлен соус {$this->sauce}";
-        $phrase = "Добавлены топики: ";
+        $phrase = "Началась готовка пиццы {$this->name}\n";
+        $phrase += "Добавлен соус {$this->sauce}\n";
+        $phrase += "Добавлены топики: \n";
         foreach ($this->toppings as $part) {
-            $phrase += "$part\n";
+            $phrase += $part + "\n";
         }
         return $phrase;
     }
 
     public function cut(): string
     {
-        return "Данную пиццу нарезают по диагонали";
+        return "Данную пиццу нарезают по диагонали\n";
     }
 }
