@@ -14,7 +14,7 @@ abstract class Pizza
         $phrase = "Добавлен соус {$this->sauce}";
         $phrase = "Добавлены топики: ";
         foreach ($this->toppings as $part) {
-            $phrase = "$part\n";
+            $phrase += "$part\n";
         }
         return $phrase;
     }
